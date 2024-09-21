@@ -4,9 +4,12 @@ Here, We aim to analyze the Road Safety and Traffic Demographics dataset (UK), c
 ### Dataset link-https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles
 
 ## PROJECT GOALS
-Identify factors responsible for most of the reported accidents.
-Build a machine learning model that is capable of accurately predicting the severity of an accident.
-Provide recommendations to the Department of Transport (UK Government), to improve road safety policies and prevent recurrences of severe accidents where possible.
+## Objectives
+
+- Identify factors responsible for most of the reported accidents.
+- Build a machine learning model that is capable of accurately predicting the severity of an accident.
+- Provide recommendations to the Department of Transport (UK Government) to improve road safety policies and prevent recurrences of severe accidents where possible.
+
 
 ## PACKAGES USED
 Scikit-learn, numpy, pandas, seaborn, Matplotlib

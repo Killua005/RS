@@ -37,20 +37,6 @@ stage('Push Docker Image to Docker Hub') {
                 }
             }
         }
-        // stage('Run Docker Container') {
-        //     steps {
-        //         script {
-
-
-        //             // Run the new container using Docker plugin
-        //             docker.image("test_streamlit_app1").run('-p 8501:8501 ')
-        //         }
-        //     }
-        // }
-    }
-}
-        //         }
-        //     }
-        // }
+       
     }
 }

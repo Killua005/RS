@@ -1,7 +1,7 @@
 pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')  // Docker Hub credentials stored in Jenkins
-        DOCKER_IMAGE = "phoenixxx786/Road_Safety_Analysis"
+        DOCKER_IMAGE = "phoenixxx786/road_safety_analysis"
         DOCKER_TAG = "latest"
         REPO_URL = "https://github.com/Killua005/RS.git"
        

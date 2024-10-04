@@ -3,7 +3,7 @@ pipeline {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')  // Docker Hub credentials stored in Jenkins
         DOCKER_IMAGE = "phoenixxx786/Road_Safety_Analysis"
         DOCKER_TAG = "latest"
-        REPO_URL = "https://github.com/ujjwalk20/Customer_Segmentation.git"
+        REPO_URL = "https://github.com/Killua005/RS.git"
        
     }
     agent any

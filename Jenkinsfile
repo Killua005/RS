@@ -4,7 +4,6 @@ pipeline {
         DOCKER_IMAGE = "phoenixxx786/road_safety_analysis"
         DOCKER_TAG = "latest"
         REPO_URL = "https://github.com/Killua005/RS.git"
-       
     }
     agent any
 
@@ -24,7 +23,7 @@ pipeline {
             }
         }
 
-stage('Push Docker Image to Docker Hub') {
+        stage('Push Docker Image to Docker Hub') {
             steps {
                 script {
                     // Use credentials for Docker Hub login
@@ -34,7 +33,11 @@ stage('Push Docker Image to Docker Hub') {
                             docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").push()
                         }
                     }
-                    stage('Run Docker Container') {
+                }
+            }
+        }
+
+        stage('Run Docker Container') {
             steps {
                 script {
                     // Run the new container using Docker plugin
@@ -42,9 +45,6 @@ stage('Push Docker Image to Docker Hub') {
                 }
             }
         }
-                }
-            }
-        }
-       
     }
 }
+

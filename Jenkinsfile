@@ -34,6 +34,14 @@ stage('Push Docker Image to Docker Hub') {
                             docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").push()
                         }
                     }
+                    stage('Run Docker Container') {
+            steps {
+                script {
+                    // Run the new container using Docker plugin
+                    docker.image("${DOCKER_IMAGE}:${DOCKER_TAG}").run()
+                }
+            }
+        }
                 }
             }
         }

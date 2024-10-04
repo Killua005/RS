@@ -1,7 +1,7 @@
 pipeline {
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-credentials')  // Docker Hub credentials stored in Jenkins
-        DOCKER_IMAGE = "ujjwalk20/cust_seg_app"
+        DOCKER_IMAGE = "phoenixxx786/Road_Safety_Analysis"
         DOCKER_TAG = "latest"
         REPO_URL = "https://github.com/ujjwalk20/Customer_Segmentation.git"
        
@@ -19,13 +19,12 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image using Docker plugin
-                    dockerImage = docker.build("-t test_streamlit_app1")
-                    dockerImage = docker.build("test_streamlit_app1")
+                    def dockerImage = docker.build("${DOCKER_IMAGE}:${DOCKER_TAG}")
                 }
             }
         }
 
-tage('Push Docker Image to Docker Hub') {
+stage('Push Docker Image to Docker Hub') {
             steps {
                 script {
                     // Use credentials for Docker Hub login
@@ -45,6 +44,11 @@ tage('Push Docker Image to Docker Hub') {
 
         //             // Run the new container using Docker plugin
         //             docker.image("test_streamlit_app1").run('-p 8501:8501 ')
+        //         }
+        //     }
+        // }
+    }
+}
         //         }
         //     }
         // }
